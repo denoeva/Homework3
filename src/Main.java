@@ -96,17 +96,18 @@ public class Main {
     }
     public static void task7 () {
         System.out.println("Задача 7");
-        short deltaWeight = 7; // вес, который нужно сбросить
+        short deltaWeight = 7000; // вес, который нужно сбросить
         short weightGrPerDayVar1 = 250; // вес за 1 день в гр (вар 1)
-        int grPerKg = 1000; // кол-во гр в кг
-        float weightKgPerDayVar1 = weightGrPerDayVar1 / (float)grPerKg; // вес за 1 день в кг (вар 1)
-        float daysLostWeightVar1 = deltaWeight / weightKgPerDayVar1;
-        System.out.println("За " + daysLostWeightVar1 + " дней спортсмен потеряет " + deltaWeight + " кг, если за 1 день будет сбрасывать " + weightGrPerDayVar1 + " грамм");
+        //int grPerKg = 1000; // кол-во гр в кг
+        //float weightKgPerDayVar1 = weightGrPerDayVar1 / (float)grPerKg; // вес за 1 день в кг (вар 1)
+        float daysLostWeightVar1 = deltaWeight / weightGrPerDayVar1;
+        System.out.println("За " + daysLostWeightVar1 + " дней спортсмен потеряет 7 кг, если за 1 день будет сбрасывать " + weightGrPerDayVar1 + " грамм");
         short weightGrPerDayVar2 = 500; // вес за 1 день в гр (вар 2)
-        float weightKgPerDayVar2 = weightGrPerDayVar2 / (float)grPerKg; // вес за 1 день в кг (вар 2)
-        float daysLostWeightVar2 = deltaWeight / weightKgPerDayVar2;
-        System.out.println("За " + daysLostWeightVar2 + " дней спортсмен потеряет " + deltaWeight + " кг, если за 1 день будет сбрасывать " + weightGrPerDayVar2 + " грамм");
-        float averageDaysLostWeight = daysLostWeightVar2 % daysLostWeightVar1;
+        //float weightKgPerDayVar2 = weightGrPerDayVar2 / (float)grPerKg; // вес за 1 день в кг (вар 2)
+        float daysLostWeightVar2 = deltaWeight / weightGrPerDayVar2;
+        System.out.println("За " + daysLostWeightVar2 + " дней спортсмен потеряет 7 кг, если за 1 день будет сбрасывать " + weightGrPerDayVar2 + " грамм");
+        double lostWeightPerDayAverage = (weightGrPerDayVar1 + weightGrPerDayVar2) / 2D;
+        double averageDaysLostWeight = deltaWeight / lostWeightPerDayAverage;
         System.out.println("Среднее количество дней похудения составит " + averageDaysLostWeight + " дней");
     }
     public static void task8 () {
